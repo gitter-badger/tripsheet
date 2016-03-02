@@ -1,9 +1,8 @@
 <?php
-
 require_once("inc/config.php");
 
 if($barc_dev_mode) {
-    error_reporting(E_ALL);    
+    error_reporting(E_ALL);
 }
 
 $barc_args = explode("/", $_GET["barc_query"]);
