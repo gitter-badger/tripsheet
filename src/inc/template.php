@@ -16,7 +16,6 @@ global $barc_page;
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <title>TripSheet.org</title>
 
-<!-- Bootstrap -->
 <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/bootstrap/css/bootstrap-theme.min.css">
 
@@ -35,7 +34,7 @@ global $barc_page;
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<?php echo URL; ?>">Brand</a>
+          <a class="navbar-brand" href="<?php echo URL; ?>">TripSheet.org</a>
         </div>
 
         <div class="collapse navbar-collapse" id="topnav">
@@ -60,7 +59,9 @@ global $barc_page;
               <ul class="dropdown-menu">
                 <?php 
                   foreach($barc_available_langs as $lang) {
-                    echo '<li><a href="' . BASE_URL . '/' .  $lang . '/' . implode($barc_args) . '">' . t('lang.'.$lang) . '</a></li>';
+                    if($lang != $barc_lang) {
+                      echo '<li><a href="' . BASE_URL . '/' .  $lang . '/' . implode($barc_args) . '">' . t('lang.'.$lang) . '</a></li>';
+                    }
                   }
                 ?>
               </ul>
@@ -76,7 +77,8 @@ global $barc_page;
 
   <footer class="footer">
     <div class="container">
-      <p class="text-muted">Copyright &copy; 2016 Erik Hofer &bull; <a href="#">Impressum</a> &bull; <a href="#">Datenschutz</a></p>
+      <!-- legal token will be replaced by CI to comply with German law -->
+      <p class="text-muted">Copyright &copy; 2016 TripSheet.org <!-- @legal@ --></p>
     </div>
   </footer>
 
