@@ -3,7 +3,7 @@
 //Development/Debug mode - SHOULD BE false IN PRODUCTION ENVIRONMENT!
 // - displays all errors and warnings
 // - echos verification links so that you can test the user system without email support
-$barc_dev_mode = true;
+$barc_dev_mode = false;
 
 //The base URL of you site, i.e. where the index.php is located
 define("BASE_URL", "http://localhost/barc");
